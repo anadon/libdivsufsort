@@ -144,7 +144,7 @@ main(int argc, const char *argv[]) {
   if(needclose & 1) { fclose(fp); }
 
   /* Construct the suffix array. */
-  fprintf(stderr, "%s: %" PRIdOFF_T " bytes ... ", fname, n);
+//~  fprintf(stderr, "%s: %" PRIdOFF_T " bytes ... ", fname, n);
 //~  start = clock();
   if(divsufsort(T, SA, (saidx_t)n) != 0) {
     fprintf(stderr, "%s: Cannot allocate memory.\n", argv[0]);
