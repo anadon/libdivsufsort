@@ -145,16 +145,16 @@ main(int argc, const char *argv[]) {
 
   /* Construct the suffix array. */
   fprintf(stderr, "%s: %" PRIdOFF_T " bytes ... ", fname, n);
-  start = clock();
+//~  start = clock();
   if(divsufsort(T, SA, (saidx_t)n) != 0) {
     fprintf(stderr, "%s: Cannot allocate memory.\n", argv[0]);
     exit(EXIT_FAILURE);
   }
-  finish = clock();
-  fprintf(stderr, "%.4f sec\n", (double)(finish - start) / (double)CLOCKS_PER_SEC);
+//~  finish = clock();
+//~  fprintf(stderr, "%.4f sec\n", (double)(finish - start) / (double)CLOCKS_PER_SEC);
 
   /* Check the suffix array. */
-  if(sufcheck(T, SA, (saidx_t)n, 1) != 0) { exit(EXIT_FAILURE); }
+//~  if(sufcheck(T, SA, (saidx_t)n, 1) != 0) { exit(EXIT_FAILURE); }
 
   /* Deallocate memory. */
   free(SA);
